@@ -1,6 +1,6 @@
 <script lang="ts">
 	import NavBar from '../../components/NavBar.svelte';
-	let stop = {
+	let stop = $state({
 		custName: '',
 		address: '',
 		suite: '',
@@ -9,7 +9,7 @@
 		notes: '',
 		signers: [],
 		error: undefined
-	};
+	});
 </script>
 
 <!-- const handleSubmit = event => { -->
