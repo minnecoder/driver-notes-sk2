@@ -1,9 +1,9 @@
 <script lang="ts">
-	let user = {
+	let user = $state({
 		userName: '',
 		password: '',
 		error: ''
-	};
+	});
 
 	// const handleSubmit = (event) => {
 	// 	event.preventDefault();
