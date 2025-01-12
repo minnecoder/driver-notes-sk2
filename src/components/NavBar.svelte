@@ -3,14 +3,14 @@
 
 	function logout() {
 		//    localStorage.removeItem("token");
-		redirect(307, '/');
+		redirect(307, '/login');
 	}
 </script>
 
 <div class="main">
-	<a class="navLink" href="/add">Add</a>
-	<a class="navLink" href="/stops">Stops</a>
-	<a class="navLink" href="" onclick={logout}> Log Out </a>
+	<a class="navLink" href="/addnotes">Add</a>
+	<a class="navLink" href="/stoplist">Stops</a>
+	<button class="logout" onclick={logout}>Logout</button>
 </div>
 
 <style>
@@ -26,5 +26,13 @@
 		margin: 0.5rem 0;
 		text-decoration: none;
 		color: black;
+	}
+
+	.logout {
+		border: none;
+		background: none;
+		font-family: inherit;
+		font-size: 1rem;
+		cursor: pointer;
 	}
 </style>
