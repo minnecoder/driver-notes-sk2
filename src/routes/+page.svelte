@@ -27,10 +27,10 @@
 		<input type="submit" value="Submit" />
 		<div>
 			<p>
-				Don't have an account?<a href="/register">Register User</a>
+				Don't have an account? <a class="link" href="/register">Register User</a>
 			</p>
 			<p>
-				Login as a Demo User <a href="/demo">Click Here</a>
+				Login as a Demo User <a class="link" href="/demo">Click Here</a>
 			</p>
 		</div>
 	</form>
@@ -74,5 +74,9 @@
 		background: #767676;
 		color: white;
 		border: solid 1px #767676;
+	}
+
+	.link {
+		text-decoration: none;
 	}
 </style>
