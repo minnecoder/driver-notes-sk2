@@ -4,8 +4,7 @@
 
 	let { data } = $props();
 	let stops = [];
-	stops = data.stops;
-	stops = JSON.parse(stops);
+	stops = JSON.parse(data.stops);
 
 	let search = $state('');
 	search = '';
