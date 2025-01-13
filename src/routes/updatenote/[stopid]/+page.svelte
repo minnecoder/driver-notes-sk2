@@ -6,6 +6,10 @@
 	let stop = $state(JSON.parse(data.stop));
 </script>
 
+<svelte:head>
+	<title>Update Stop</title>
+</svelte:head>
+
 <div class="main">
 	<NavBar />
 	<h1 class="updateTitle">Update Stop</h1>
