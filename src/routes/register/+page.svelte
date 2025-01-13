@@ -3,9 +3,17 @@
 	let user = $state({
 		userName: '',
 		password: '',
+		confirmPassword: '',
 		error: ''
 	});
 	let form: ActionData = $props();
+	let message = $state('');
+
+	if (form && form.form) {
+		message = form.form.message;
+	} else {
+		message = '';
+	}
 </script>
 
 <svelte:head>
@@ -14,10 +22,10 @@
 
 <div>
 	<h1 class="registerTitle">Delivery Notes</h1>
-	{#if form?.message}
-		<p class="error">{form?.message}</p>
+	{#if message}
+		<p class="error">{message}</p>
 	{/if}
-	<form class="registerForm" action="?/register" method="POST">
+	<form class="registerForm" method="POST" action="/register">
 		<input
 			required
 			name="userName"
@@ -32,6 +40,14 @@
 			type="password"
 			placeholder="Password"
 			bind:value={user.password}
+		/>
+
+		<input
+			required
+			name="confirmPassword"
+			type="password"
+			placeholder="Confirm password"
+			value={user.confirmPassword}
 		/>
 
 		<input type="submit" value="Submit" />
@@ -56,6 +72,7 @@
 
 	.error {
 		text-align: center;
+		color: red;
 	}
 
 	.registerForm {

@@ -5,12 +5,16 @@ import type { Actions } from './$types';
 import { fail, redirect } from '@sveltejs/kit';
 
 export const actions: Actions = {
-	register: async ({ request }) => {
+	default: async ({ request }) => {
 		// Get user name and password
 		const formData = await request.formData();
-		const user = formData.get('userName') as unknown as string;
-		const password = formData.get('password') as unknown as string;
-		const confirmPassword = formData.get('confirmPassword') as unknown as string;
+		const user = formData.get('userName') as string | null;
+		const password = formData.get('password') as string | null;
+		const confirmPassword = formData.get('confirmPassword') as string | null;
+
+		if (!user || !password || !confirmPassword) {
+			return fail(400, { message: 'All fields are required' });
+		}
 
 		// Check if user name already exists
 		const userExists = await db.collection('users').findOne({ userName: user });
@@ -41,6 +45,6 @@ export const actions: Actions = {
 		}
 
 		// Redirect to stops route after successful register
-		throw redirect(302, '/stops');
+		throw redirect(302, '/stoplist');
 	}
 };
