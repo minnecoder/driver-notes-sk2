@@ -1,40 +1,25 @@
 <script lang="ts">
+	import type { ActionData } from './$types';
+
 	let user = $state({
 		userName: '',
 		password: '',
 		error: ''
 	});
 
-	// const handleSubmit = (event) => {
-	// 	event.preventDefault();
-	// 	fetch('/api/v1/user/login', {
-	// 		method: 'POST',
-	// 		mode: 'cors',
-	// 		headers: { 'Content-Type': 'application/json' },
-	// 		body: JSON.stringify({
-	// 			userName: user.userName,
-	// 			password: user.password
-	// 		})
-	// 	})
-	// 		.then((res) => res.json())
-	// 		.then((data) => {
-	// 			if (Object.prototype.hasOwnProperty.call(data, 'error')) {
-	// 				setUser({ error: data.error });
-	// 				history.push('/');
-	// 			}
-	// 			if (Object.prototype.hasOwnProperty.call(data, 'token')) {
-	// 				localStorage.setItem('token', data.token);
-	// 				history.push('/stops');
-	// 			}
-	// 		});
-	// };
+	let form: ActionData = $props();
 </script>
+
+<svelte:head>
+	<title>Login</title>
+</svelte:head>
 
 <div class="main">
 	<h1 class="loginTitle">Delivery Notes</h1>
-	<p class="error">{user.error}</p>
-	<!-- TODO: add "handleSubmit" to form below -->
-	<form class="loginForm">
+	{#if form?.message}
+		<p class="error">{form?.message}</p>
+	{/if}
+	<form class="loginForm" action="?/login" method="POST">
 		<input name="userName" type="text" placeholder="User Name" bind:value={user.userName} />
 
 		<input name="password" type="password" placeholder="Password" bind:value={user.password} />
@@ -42,10 +27,10 @@
 		<input type="submit" value="Submit" />
 		<div>
 			<p>
-				Don't have an account? <a class="link" href="/register">Register User</a>
+				Don't have an account?<a href="/register">Register User</a>
 			</p>
 			<p>
-				Login as a Demo User <a class="link" href="/demo">Click Here</a>
+				Login as a Demo User <a href="/demo">Click Here</a>
 			</p>
 		</div>
 	</form>
@@ -89,9 +74,5 @@
 		background: #767676;
 		color: white;
 		border: solid 1px #767676;
-	}
-
-	.link {
-		text-decoration: none;
 	}
 </style>
