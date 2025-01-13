@@ -1,42 +1,23 @@
-<script>
+<script lang="ts">
+	import type { ActionData } from './$types';
 	let user = $state({
 		userName: '',
 		password: '',
 		error: ''
 	});
-
-	// function handleSubmit(event) {
-	// 	event.preventDefault();
-	// 	fetch('/api/v1/user/add', {
-	// 		method: 'POST',
-	// 		mode: 'cors',
-	// 		headers: {
-	// 			'Content-Type': 'application/json'
-	// 		},
-	// 		body: JSON.stringify({
-	// 			userName: user.userName,
-	// 			password: user.password
-	// 		})
-	// 	})
-	// 		.then((res) => res.json())
-	// 		.then((data) => {
-	// 			if (Object.prototype.hasOwnProperty.call(data, 'error')) {
-	// 				setUser({ error: data.error });
-	// 				history.push('/');
-	// 			}
-	// 			if (Object.prototype.hasOwnProperty.call(data, 'success')) {
-	// 				localStorage.setItem('token', data.token);
-	// 				history.push('/stops');
-	// 			}
-	// 		});
-	// }
+	let form: ActionData = $props();
 </script>
+
+<svelte:head>
+	<title>Register User</title>
+</svelte:head>
 
 <div>
 	<h1 class="registerTitle">Delivery Notes</h1>
-	<p class="error">{user.error}</p>
-	<!-- TODO: Add "handleSubmit" to form below -->
-	<form class="registerForm">
+	{#if form?.message}
+		<p class="error">{form?.message}</p>
+	{/if}
+	<form class="registerForm" action="?/register" method="POST">
 		<input
 			required
 			name="userName"
