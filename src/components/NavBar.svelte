@@ -1,20 +1,17 @@
-<script>
-	import { redirect } from '@sveltejs/kit';
-
-	function logout() {
-		//    localStorage.removeItem("token");
-		redirect(307, '/login');
-	}
-</script>
-
 <div class="main">
 	<a class="navLink" href="/addnotes">Add</a>
 	<a class="navLink" href="/stoplist">Stops</a>
-	<button class="logout" onclick={logout}>Logout</button>
+
+	<form class="logoutForm" action="/logout" method="POST">
+		<button class="logout" type="submit">Logout</button>
+	</form>
 </div>
 
 <style>
 	.main {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		background: #d0d1d4;
 		text-align: center;
 		box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
