@@ -4,16 +4,17 @@ import { fail, redirect } from '@sveltejs/kit';
 import bcrypt from 'bcryptjs';
 
 export const actions: Actions = {
-	login: async ({ cookies, request }) => {
+	default: async ({ cookies, request }) => {
 		const data = await request.formData();
-		const username = data.get('username');
+		const userName = data.get('userName');
 		const password = data.get('password') as unknown as string;
 
 		// TODO: Change the error message before deploying
 		// Check if user name is in the db
-		const isUserValid = await db.collection('users').findOne({ username });
+		const isUserValid = await db.collection('users').findOne({ userName: userName });
+
 		if (!isUserValid) {
-			return fail(400, { message: 'The user name dpes not exist' });
+			return fail(400, { message: 'The user name does not exist' });
 		}
 
 		// TODO: Change the error message before deploying
@@ -39,6 +40,6 @@ export const actions: Actions = {
 			maxAge: 60 * 60 * 24 * 30
 		});
 
-		throw redirect(302, '/');
+		throw redirect(302, '/stoplist');
 	}
 };

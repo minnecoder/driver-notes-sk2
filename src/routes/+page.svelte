@@ -8,6 +8,13 @@
 	});
 
 	let form: ActionData = $props();
+	form = { message: '' };
+	let message = $state('');
+	if (form && form.form) {
+		message = form.form.message;
+	} else {
+		message = '';
+	}
 </script>
 
 <svelte:head>
@@ -16,10 +23,10 @@
 
 <div class="main">
 	<h1 class="loginTitle">Delivery Notes</h1>
-	{#if form?.message}
-		<p class="error">{form?.message}</p>
+	{#if message}
+		<p class="error">{message}</p>
 	{/if}
-	<form class="loginForm" action="?/login" method="POST">
+	<form class="loginForm" method="POST" action="/">
 		<input name="userName" type="text" placeholder="User Name" bind:value={user.userName} />
 
 		<input name="password" type="password" placeholder="Password" bind:value={user.password} />
