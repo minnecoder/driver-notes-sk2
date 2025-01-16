@@ -12,41 +12,15 @@
 	});
 </script>
 
-<!-- const handleSubmit = event => { -->
-<!--   event.persist(); -->
-<!--   const token = localStorage.getItem("token"); -->
-<!--   fetch("/api/v1/notes", { -->
-<!--     method: "POST", -->
-<!--     mode: "cors", -->
-<!--     headers: { "Content-Type": "application/json", Authorization: token }, -->
-<!--     body: JSON.stringify({ -->
-<!--       custName: stop.custName, -->
-<!--       address: stop.address, -->
-<!--       suite: stop.suite, -->
-<!--       city: stop.city, -->
-<!--       deliveryLocation: stop.deliveryLocation, -->
-<!--       notes: stop.notes, -->
-<!--       signers: stop.signers, -->
-<!--     }), -->
-<!--   }); -->
-<!--   setStop({ -->
-<!--     custName: "", -->
-<!--     address: "", -->
-<!--     suite: "", -->
-<!--     city: "", -->
-<!--     deliveryLocation: "", -->
-<!--     notes: "", -->
-<!--     signers: "", -->
-<!--     error: "", -->
-<!--   }); -->
-<!--   history.push("/stops"); -->
-<!-- } -->
+<svelte:head>
+	<title>Add Stop</title>
+</svelte:head>
 
 <div class="main">
 	<NavBar />
 	<h1 class="addTitle">Add Stop</h1>
 	<p>{stop.error}</p>
-	<form class="addForm">
+	<form class="addForm" action="?/addNote" method="POST">
 		<input name="custName" type="text" placeholder="Customer Name" bind:value={stop.custName} />
 		<input name="address" type="text" placeholder="Address" bind:value={stop.address} />
 		<input name="suite" type="text" placeholder="Suite" bind:value={stop.suite} />
