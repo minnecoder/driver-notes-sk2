@@ -43,15 +43,16 @@
 					{/each}
 				</ul>
 			</div>
-
-			<input
-				class="addSignerText"
-				name="signersName"
-				placeholder="Signer Name"
-				type="text"
-				bind:value={signerName}
-			/>
-			<input class="addSignerBtn" value="Add Signer" onclick={addDemoSigner} />
+			<div>
+				<input
+					class="addSignerText"
+					name="signersName"
+					placeholder="Signer Name"
+					type="text"
+					bind:value={signerName}
+				/>
+				<input class="addSignerBtn" value="Add Signer" onclick={addDemoSigner} />
+			</div>
 		</div>
 	</div>
 
@@ -161,5 +162,7 @@
 		padding: 0.5rem;
 		margin-right: 0.5rem;
 		width: 50%;
+		border: none;
+		border-radius: 5px;
 	}
 </style>
