@@ -33,7 +33,6 @@
 		/>
 		<input name="notes" type="text" placeholder="Notes" bind:value={stop.notes} />
 		<input name="signers" type="text" placeholder="Signers" bind:value={stop.signers} />
-		<!-- TODO: add handleSubmit to submit button -->
 		<input type="submit" value="Add Note" />
 	</form>
 </div>
