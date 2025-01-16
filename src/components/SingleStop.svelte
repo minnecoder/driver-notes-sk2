@@ -163,5 +163,7 @@
 	.addSignerText {
 		padding: 0.5rem;
 		margin-right: 0.5rem;
+		border-radius: 5px;
+		border: none;
 	}
 </style>
