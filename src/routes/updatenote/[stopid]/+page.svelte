@@ -38,10 +38,6 @@
 </div>
 
 <style>
-	.main {
-		/* background: #c0c6c8; */
-	}
-
 	.updateTitle {
 		font-size: 3rem;
 		color: #5f48d9;
@@ -60,7 +56,7 @@
 		width: 40%;
 		border-radius: 8px;
 		border: solid 1px #c0c6c8;
-		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+		box-shadow: 5px 5px 10px rgba(95, 95, 95, 0.2);
 	}
 
 	input[type='submit'] {
@@ -70,7 +66,7 @@
 		margin-top: 0.5rem;
 		border: solid 1px #5f48d9;
 		border-radius: 8px;
-		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+		box-shadow: 5px 5px 10px rgba(95, 95, 95, 0.2);
 		color: #fff;
 	}
 </style>

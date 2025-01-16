@@ -44,16 +44,11 @@
 {/if}
 
 <style>
-	.main {
-		background: #000;
-	}
-
 	.noStopListDiv {
 		align-items: center;
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		background: #000;
 	}
 
 	.stopListDiv {
@@ -61,7 +56,6 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		background: #000;
 	}
 
 	.search {
