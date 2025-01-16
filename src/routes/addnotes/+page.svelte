@@ -65,13 +65,9 @@
 </div>
 
 <style>
-	.main {
-		background: #c0c6c8;
-	}
-
 	.addTitle {
 		font-size: 3rem;
-		color: red;
+		color: #5f48d9;
 		text-align: center;
 	}
 
@@ -83,8 +79,8 @@
 	}
 
 	input[type='text'] {
-		margin: 0.5rem 0;
-		padding: 1rem 0;
+		margin: 0.75rem 0;
+		padding: 1rem 0.5rem;
 		width: 50%;
 		border-radius: 8px;
 		border: solid 1px #c0c6c8;
@@ -92,12 +88,14 @@
 	}
 
 	input[type='submit'] {
-		background: #767676;
-		width: 5rem;
+		background: #5f48d9;
+		width: 6rem;
 		padding: 1rem 0;
-		margin-top: 0.5rem;
-		border: solid 1px #767676;
+		margin-top: 1rem;
+		border: solid 1px #5f48d9;
 		border-radius: 8px;
 		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+		color: #fff;
+		cursor: pointer;
 	}
 </style>

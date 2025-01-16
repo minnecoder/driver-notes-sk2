@@ -33,12 +33,12 @@
 
 <style>
 	.main {
-		background: #c0c6c8;
+		/* background: #c0c6c8; */
 	}
 
 	.updateTitle {
 		font-size: 3rem;
-		color: red;
+		color: #5f48d9;
 		text-align: center;
 	}
 
@@ -58,25 +58,25 @@
 	}
 
 	input[type='submit'] {
-		background: #767676;
+		background: #5f48d9;
 		width: 10rem;
 		padding: 1rem 0.5rem;
 		margin-top: 0.5rem;
-		border: solid 1px #767676;
+		border: solid 1px #5f48d9;
 		border-radius: 8px;
 		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 	}
 
 	.demoBackBtn {
 		text-decoration: none;
-		color: black;
+		color: #fff;
 		font-size: 0.8rem;
 		text-align: center;
-		background: #767676;
+		background: #5f48d9;
 		width: 9rem;
 		padding: 1rem 0.5rem;
 		margin-top: 0.5rem;
-		border: solid 1px #767676;
+		border: solid 1px #5f48d9;
 		border-radius: 8px;
 		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 	}

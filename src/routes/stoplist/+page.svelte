@@ -45,7 +45,7 @@
 
 <style>
 	.main {
-		background: #c0c6c8;
+		background: #000;
 	}
 
 	.noStopListDiv {
@@ -53,7 +53,7 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		background: #c0c6c8;
+		background: #000;
 	}
 
 	.stopListDiv {
@@ -61,24 +61,22 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		background: #c0c6c8;
+		background: #000;
 	}
 
 	.search {
 		margin-bottom: 1rem;
-		padding: 1rem 0;
-		width: 50%;
-		text-align: center;
+		padding: 1rem 0.5rem;
+		width: 30%;
 		border-radius: 8px;
 		border: solid 1px #c0c6c8;
 		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 	}
 
 	.title {
-		color: red;
+		color: #5f48d9;
 		font-size: 3rem;
 		text-align: center;
-		background: #c0c6c8;
 	}
 
 	.addLink {
@@ -86,9 +84,10 @@
 		text-decoration: none;
 		font-weight: bold;
 		color: white;
-		background-color: red;
+		background-color: #5f48d9;
 		margin-bottom: 1rem;
 		padding: 0.5rem 1rem;
-		border: 1px solid red;
+		border: 1px solid#5f48d9;
+		border-radius: 10px;
 	}
 </style>

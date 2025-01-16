@@ -66,15 +66,16 @@
 
 <style>
 	.main {
-		width: 70%;
+		width: 50%;
 		padding-left: 2rem;
-		margin: 0.5rem 0;
+		margin: 1rem 0;
 		border-radius: 8px;
-		background-color: white;
-		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+		background-color: #1e1f23;
+		box-shadow: 5px 5px 10px rgba(95, 95, 95, 0.2);
 	}
 	.main p {
 		font-weight: bold;
+		color: #fff;
 	}
 	.main span {
 		font-weight: normal;
@@ -83,6 +84,7 @@
 	.stopTitle {
 		text-align: center;
 		font-size: 1.5rem;
+		color: #fff;
 	}
 
 	.left {
@@ -112,6 +114,10 @@
 		list-style-type: none;
 	}
 
+	.signerList li {
+		color: #fff;
+	}
+
 	.stopData {
 		display: flex;
 		margin-right: 2rem;
@@ -132,11 +138,11 @@
 		font-weight: bold;
 		color: white;
 		overflow: hidden;
-		background-color: #767676;
+		background-color: #5f48d9;
 		margin: 1rem 0;
 		padding: 0.5rem 1rem;
-		border: 1px solid #767676;
-		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+		border: 1px solid #5f48d9;
+		box-shadow: 5px 5px 10px rgba(95, 95, 95, 0.3);
 		border-radius: 5px;
 	}
 
@@ -146,11 +152,11 @@
 		font-weight: bold;
 		color: white;
 		overflow: hidden;
-		background-color: #767676;
+		background-color: #5f48d9;
 		margin: 1rem 0;
 		padding: 0.5rem 1rem;
-		border: 1px solid #767676;
-		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+		border: 1px solid #5f48d9;
+		box-shadow: 5px 5px 10px rgba(95, 95, 95, 0.3);
 		border-radius: 5px;
 	}
 
